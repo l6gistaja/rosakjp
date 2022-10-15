@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot name="fourwheeler">
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.430 0.320 0.140" />
+      </geometry>
+    </visual>
+  </link>
+
+</robot>

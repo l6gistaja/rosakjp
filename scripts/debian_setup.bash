@@ -14,11 +14,17 @@ echo "Create Catkin workspace and fetch necessary ROS packages"
 cd ~
 mkdir -p catkin_ws/src
 cd catkin_ws/src
+
+# assignments 1 & 2
 git clone https://github.com/robotont/robotont_msgs.git
 git clone https://github.com/robotont/robotont_driver.git
 git clone https://github.com/robotont/robotont_demos.git
 git clone https://github.com/robotont/robotont_description.git
 git clone https://github.com/wjwwood/serial.git
+
+# assignment 3
+git clone https://github.com/ros/urdf_tutorial.git
+git clone https://github.com/ros/joint_state_publisher.git
 
 echo "Build and load Catkin workspace"
 
