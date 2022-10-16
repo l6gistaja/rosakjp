@@ -1,14 +1,31 @@
 <?xml version="1.0"?>
 <robot name="fourwheeler" xmlns:xacro="http://www.ros.org/wiki/xacro">
     
+    <!-- constants; original values are in comments -->
+    
     <xacro:property name="base_width" value="0.32"/> <!-- 0.32 -->
-    <xacro:property name="base_length" value="0.83"/> <!-- 0.43 -->
+    <xacro:property name="base_length" value="0.43"/> <!-- 0.43 -->
     <xacro:property name="base_height" value="0.14"/> <!-- 0.14 -->
     <xacro:property name="wheel_width" value="0.05"/> <!-- 0.05 -->
-    <xacro:property name="lowrider" value="0.01"/> <!-- 0 -->
+    <xacro:property name="lowrider" value="0"/> <!-- 0 -->
     <xacro:property name="wheel_radius" value="0.1"/> <!-- 0.1 -->
+    
+    <!-- calculated parameters -->
+    
     <xacro:property name="half_track" value="${base_width/2 + wheel_width/2}"/>
-
+    <xacro:property name="wheel_axis_z" value="${lowrider-(base_height/2 - 0.02)}"/>
+    
+    <!-- model itself -->
+    
+    <!-- invisible point at "floor" for driving model -->
+    <link name="base_footprint"></link>
+    <joint name="base_to_base_footprint" type="fixed">
+        <parent link="base_footprint" />
+        <child link="base_link" />
+        <origin xyz="0 0 ${wheel_radius - wheel_axis_z}" />
+    </joint>
+    
+    
     <link name="base_link">
         <visual>
             <geometry>
@@ -36,7 +53,7 @@
         <joint name="${wheel_name}_to_base" type="continuous">
             <parent link="base_link" />
             <child link="${wheel_name}" />
-            <origin xyz="${reflect_x * (base_length/2 - wheel_radius)} ${reflect_y * half_track} ${lowrider-(base_height/2 - 0.02)}" rpy="1.57 0 0" />
+            <origin xyz="${reflect_x * (base_length/2 - wheel_radius)} ${reflect_y * half_track} ${wheel_axis_z}" rpy="1.57 0 0" />
             <axis xyz="0 0 1" />
         </joint>
     

@@ -25,6 +25,10 @@ git clone https://github.com/wjwwood/serial.git
 # assignment 3
 git clone https://github.com/ros/urdf_tutorial.git
 git clone https://github.com/ros/joint_state_publisher.git
+git clone https://github.com/unitartu-edu/aironbot_description.git
+#git clone https://github.com/unitartu-edu/yanu_description.git
+git clone https://github.com/unitartu-edu/starship_description.git
+git clone https://github.com/unitartu-edu/clevon_description.git
 
 echo "Build and load Catkin workspace"
 
