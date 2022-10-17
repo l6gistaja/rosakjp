@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="aironbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+  <material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+
+  <material name="white">
+    <color rgba="0.9 0.9 0.9 1"/>
+  </material>
+   
+   <link name="base_link">
+      <visual>
+         <geometry>
+            <mesh filename="package://aironbot_description/meshes/manipulator_base_link.stl" />
+         </geometry>
+         <material name="blue"/>
+      </visual>
+      <collision>
+         <geometry>
+            <mesh filename="package://aironbot_description/meshes/manipulator_base_link.stl" />
+         </geometry>
+      </collision>
+   </link>
+   
+   <link name="link_1">
+      <visual>
+         <geometry>
+            <mesh filename="package://aironbot_description/meshes/manipulator_link.stl" />
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <collision>
+         <geometry>
+            <mesh filename="package://aironbot_description/meshes/manipulator_link.stl" />
+         </geometry>
+      </collision>
+   </link>
+   
+   <joint name="link_1_to_base" type="revolute">
+      <parent link="base_link" />
+      <child link="link_1" />
+      <limit effort="1000.0" lower="-1.57" upper="1.57" velocity="0.5"/> 
+      <origin xyz="0 0 0.14" />
+      <axis xyz="0 1 0" />    
+   </joint>
+   
+   <xacro:macro name="nextlink" params="l1 l2">
+
+	   <link name="link_${l2}">
+	      <visual>
+		 <geometry>
+		    <mesh filename="package://aironbot_description/meshes/manipulator_link.stl" />
+		 </geometry>
+		 <material name="white"/>
+	      </visual>
+	      <collision>
+		 <geometry>
+		    <mesh filename="package://aironbot_description/meshes/manipulator_link.stl" />
+		 </geometry>
+	      </collision>
+	   </link>
+	   
+	   <joint name="link_${l2}_to_link_${l1}" type="revolute">
+	      <parent link="link_${l1}" />
+	      <child link="link_${l2}" />
+	      <limit effort="1000.0" lower="-1.57" upper="1.57" velocity="0.5"/> 
+	      <origin xyz="0 0 0.32" />
+	      <axis xyz="0 1 0" />    
+	   </joint>
+   
+   </xacro:macro>
+   
+   <xacro:nextlink l1="1" l2="2"/>
+   <xacro:nextlink l1="2" l2="3"/>
+   <xacro:nextlink l1="3" l2="4"/>
+   
+   <link name="gripper">
+      <visual>
+	 <geometry>
+	    <mesh filename="package://aironbot_description/meshes/gripper.stl" />
+	 </geometry>
+	 <material name="white"/>
+      </visual>
+      <collision>
+	 <geometry>
+	    <mesh filename="package://aironbot_description/meshes/gripper.stl" />
+	 </geometry>
+      </collision>
+   </link>
+   
+   <joint name="gripper_to_link_4" type="revolute">
+      <parent link="link_4" />
+      <child link="gripper" />
+      <limit effort="1000.0" lower="-1.57" upper="1.57" velocity="0.5"/> 
+      <origin xyz="0 0 0.32" rpy="0 1.57 0" />
+      <axis xyz="0 1 0" />    
+   </joint>
+
+</robot>
