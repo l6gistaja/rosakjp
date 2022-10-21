@@ -1,0 +1,10 @@
+{
+    "description": "Assignment #4: 1st test",
+    "wait_at_first": 0,
+    "rate": 10,
+    "legs": [
+        {"x": 0.1, "y": 0, "Z": 0, "t": 2, "d": "forward"},
+        {"x": 0, "y": 0.1, "Z": 0, "t": 2, "d": "left"},
+        {"x": 0.1, "y": 0, "Z": -0.2, "t": 8, "d": "long turn right"}
+    ]
+}
