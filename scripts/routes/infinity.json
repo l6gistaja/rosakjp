@@ -1,14 +1,19 @@
 {
-    "description": "Assignment #4: infinity symbol; TODO: turning radius and duration isn't precise",
-    "wait_at_first": 0,
-    "rate": 200,
-    "cycles": -1,
-    "legs": [
-        {"x": 0.1, "y": 0, "Z": 0, "t": 3, "d": "drive away from center"},
-        {"x": 0.1, "y": 0, "Z": -0.508, "t": 8.4, "d": "turn right"},
-        {"x": 0.1, "y": 0, "Z": 0, "t": 3, "d": "drive back to center"},
-        {"x": 0.1, "y": 0, "Z": 0, "t": 3, "d": "drive away from center (2)"},
-        {"x": 0.1, "y": 0, "Z": 0.508, "t": 8.4, "d": "turn left"},
-        {"x": 0.1, "y": 0, "Z": 0, "t": 3, "d": "drive back to center (2)"}
+    "description": "Assignment #4",
+    "routes": [
+        {
+            "description": "INFINITY; TODO: turning radius and duration isn't precise",
+            "wait_at_first": 0,
+            "rate": 200,
+            "cycles": -1,
+            "legs": [
+                {"x": 0.1, "y": 0, "Z": 0, "t": 3, "d": "drive away from center"},
+                {"x": 0.1, "y": 0, "Z": -0.508, "t": 8.4, "d": "turn right"},
+                {"x": 0.1, "y": 0, "Z": 0, "t": 3, "d": "drive back to center"},
+                {"x": 0.1, "y": 0, "Z": 0, "t": 3, "d": "drive away from center (2)"},
+                {"x": 0.1, "y": 0, "Z": 0.508, "t": 8.4, "d": "turn left"},
+                {"x": 0.1, "y": 0, "Z": 0, "t": 3, "d": "drive back to center (2)"}
+            ]
+        }
     ]
 }
