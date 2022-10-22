@@ -1,0 +1,10 @@
+{
+    "description": "Assignment #4: square",
+    "wait_at_first": 0,
+    "rate": 200,
+    "cycles": -1,
+    "legs": [
+        {"x": 0.1, "y": 0, "Z": 0, "t": 2, "d": "forward"},
+        {"x": 0, "y": 0, "Z": 0.785398163397, "t": 2, "d": "turn left"}
+    ]
+}
