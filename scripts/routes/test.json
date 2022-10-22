@@ -1,8 +1,8 @@
 {
-    "description": "Assignment #4",
+    "name": "Assignment #4",
     "routes": [
         {
-            "description": "1ST TEST",
+            "name": "1ST TEST",
             "wait_at_first": 0,
             "rate": 10,
             "legs": [

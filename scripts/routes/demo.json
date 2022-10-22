@@ -1,8 +1,8 @@
 {
-    "description": "Assignment #4",
+    "name": "Assignment #4",
     "routes": [
         {
-            "description": "HOLONOMIC SQUARE",
+            "name": "HOLONOMIC SQUARE",
             "wait_at_first": 1,
             "rate": 200,
             "cycles": 1,
@@ -14,7 +14,7 @@
             ]
         },
         {
-            "description": "SQUARE",
+            "name": "SQUARE",
             "wait_at_first": 1,
             "rate": 200,
             "cycles": 4,
@@ -24,7 +24,7 @@
             ]
         },
         {
-            "description": "CIRCLE",
+            "name": "CIRCLE",
             "wait_at_first": 1,
             "rate": 200,
             "cycles": -1,

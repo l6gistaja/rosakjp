@@ -1,8 +1,8 @@
 {
-    "description": "Assignment #4",
+    "name": "Assignment #4",
     "routes": [
         {
-            "description": "SQUARE",
+            "name": "SQUARE",
             "wait_at_first": 0,
             "rate": 200,
             "cycles": -1,

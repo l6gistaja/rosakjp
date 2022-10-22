@@ -12,11 +12,11 @@ def main():
     with open(os.path.dirname(os.path.realpath(__file__))+'/routes/'+sys.argv[1]+'.json') as data_file:    
         
         data = json.load(data_file)
-        print(data['description'])
+        print(data['name'])
         
         for route in data['routes']:
             
-            print('===== ',route['description'],' =====')
+            print('===== ',route['name'],' =====')
             rospy.sleep(route['wait_at_first'])
             loop_rate = rospy.Rate(route['rate'])
             counter = 1
