@@ -3,7 +3,7 @@
     "routes": [
         {
             "name": "HOLONOMIC SQUARE",
-            "wait_at_first": 1,
+            "wait_at_first": 2,
             "rate": 200,
             "cycles": 1,
             "legs": [
