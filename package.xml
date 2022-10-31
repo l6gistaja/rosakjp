@@ -49,6 +49,8 @@
   <!-- Use doc_depend for packages you need only for building documentation: -->
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
+  
+  <!-- assignment # 3 -->
   <build_depend>urdf</build_depend>
   <build_depend>xacro</build_depend>
   <build_export_depend>urdf</build_export_depend>
@@ -56,6 +58,7 @@
   <exec_depend>urdf</exec_depend>
   <exec_depend>xacro</exec_depend>
   
+  <!-- assignment # 4 (& 5) -->
   <build_depend>rospy</build_depend>
   <build_depend>geometry_msgs</build_depend>
   <build_export_depend>rospy</build_export_depend>
@@ -63,6 +66,13 @@
   <exec_depend>rospy</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
 
+  <!-- assignment # 5 -->
+  <build_depend>ar_track_alvar_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_export_depend>ar_track_alvar_msgs</build_export_depend>
+  <build_export_depend>tf</build_export_depend>
+  <exec_depend>ar_track_alvar_msgs</exec_depend>
+  <exec_depend>tf</exec_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>

@@ -30,6 +30,12 @@ git clone https://github.com/unitartu-edu/aironbot_description.git
 git clone https://github.com/unitartu-edu/starship_description.git
 git clone https://github.com/unitartu-edu/clevon_description.git
 
+# assignment 5
+git clone https://github.com/rios-ai/ar_track_alvar.git
+cd ar_track_alvar
+git checkout feature/rios_bug_fix
+cd ..
+
 echo "Build and load Catkin workspace"
 
 cd ..
