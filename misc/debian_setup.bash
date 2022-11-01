@@ -35,6 +35,8 @@ git clone https://github.com/rios-ai/ar_track_alvar.git
 cd ar_track_alvar
 git checkout feature/rios_bug_fix
 cd ..
+git clone https://github.com/robotont/robotont_gazebo.git
+git clone https://github.com/robotont/robotont_nuc_description.git
 
 echo "Build and load Catkin workspace"
 
