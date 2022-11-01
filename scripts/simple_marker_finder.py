@@ -4,17 +4,18 @@ import rospy
 from ar_track_alvar_msgs.msg import AlvarMarkers
 from geometry_msgs.msg import Twist
 
+found_markers = 0
 rotation_direction = -1
-last_marker = None
 
 def ar_message_handler(data):
-    global last_marker
+    global found_markers
     global rotation_direction
     if len(data.markers) > 0:
         for marker in data.markers:
             rospy.loginfo("Detected marker with ID " + str(marker.id))
-            if ((last_marker is None) and (marker.id == 1)) or (not(last_marker is None) and (marker.id != last_marker)) :
-                last_marker = marker.id
+            if found_markers < 2:
+                found_markers += 1
+            if found_markers > 1:
                 rotation_direction = -rotation_direction
                 break
                 
