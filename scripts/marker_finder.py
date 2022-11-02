@@ -12,14 +12,15 @@ def ar_message_handler(data):
     global rotation_direction
     if len(data.markers) > 0:
         for marker in data.markers:
-            rospy.loginfo("Detected marker with ID " + str(marker.id))
+            rospy.loginfo("Detected marker " + str(marker.id))
             if ((last_marker is None) and (marker.id == 1)) or (not(last_marker is None) and (marker.id != last_marker)) :
                 last_marker = marker.id
                 rotation_direction = -rotation_direction
+                rospy.loginfo("Rotation direction  " + str(marker.id))
                 break
                 
     else:
-        rospy.loginfo("No AR markers detected.")
+        #rospy.loginfo("No AR markers detected.")
 
 def main():
     global rotation_direction
