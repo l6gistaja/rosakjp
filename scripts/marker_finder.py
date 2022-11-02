@@ -16,7 +16,7 @@ def ar_message_handler(data):
             if ((last_marker is None) and (marker.id == 1)) or (not(last_marker is None) and (marker.id != last_marker)) :
                 last_marker = marker.id
                 rotation_direction = -rotation_direction
-                rospy.loginfo("Rotation direction  " + rotation_direction)
+                rospy.loginfo("Rotation direction  " + str(rotation_direction))
                 break
                 
     #else:
