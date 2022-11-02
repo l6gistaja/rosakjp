@@ -19,7 +19,7 @@ def ar_message_handler(data):
                 rospy.loginfo("Rotation direction  " + str(marker.id))
                 break
                 
-    else:
+    #else:
         #rospy.loginfo("No AR markers detected.")
 
 def main():
