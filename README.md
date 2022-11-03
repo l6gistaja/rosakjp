@@ -11,3 +11,5 @@ Kodutöö 3: roslaunch rosakjp fourwheeler_drive.launch
 Kodutöö 4: rosrun rosakjp velocity_publisher.py demo
 
 Kodutöö 5: roslaunch rosakjp marker_finder.launch ; rosrun rosakjp marker_finder.py
+
+Kodutöö 6: roslaunch rosakjp autonomic_navigation.launch
