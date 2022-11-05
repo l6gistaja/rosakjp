@@ -1,0 +1,14 @@
+<launch>
+  <!-- Assignment #6, step 2: automatic navigating. Before load map: rosrun map_server map_server misc/assignment6_map.yaml -->
+  <node name="amcl" pkg="amcl" type="amcl" />
+  <include file="$(find robotont_navigation)/launch/move_base.launch"/>
+  <include file="$(find robotont_demos)/launch/2d_slam_display.launch"/>
+  <!--
+  
+  rosrun map_server map_server misc/assignment6_map.yaml
+  rosrun amcl amcl
+  roslaunch robotont_navigation move_base.launch
+  roslaunch robotont_demos 2d_slam_display.launch
+  
+  -->
+</launch>
