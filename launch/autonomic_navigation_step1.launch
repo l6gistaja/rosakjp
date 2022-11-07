@@ -1,18 +1,9 @@
 <launch>
-  <!-- Assignment #6, step 1: mapping. After mapping save map with: rosrun map_server map_saver -f misc/assignment6_map.yaml --> 
+  <!-- Assignment #6, step 1: mapping. After mapping save map with: rosrun map_server map_saver -f assignment6_map --> 
   <include file="$(find robotont_gazebo)/launch/world_minimaze.launch">
     <arg name="model" value="robotont_gazebo_lidar"/>
   </include>
   <include file="$(find robotont_demos)/launch/gmapping.launch"/>
   <include file="$(find robotont_demos)/launch/2d_slam_display.launch"/>
-  <node name="fake_driver_node" pkg="robotont_driver" type="fake_driver_node" />
   <node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" />
-  <!--
-  
-  roslaunch robotont_gazebo world_minimaze.launch model:=robotont_gazebo_lidar
-  roslaunch robotont_demos gmapping.launch
-  roslaunch robotont_demos 2d_slam_display.launch
-  rosrun map_server map_saver -f misc/assignment6_map.yaml
-  
-  -->
 </launch>
